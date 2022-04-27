@@ -37,6 +37,6 @@ Title| Description | Protected | Required middleware | Request | Success respons
  |--- |--- |--- |--- |--- |--- |--- |
 GET/tasks | Get all tasks | yes | checkAuth | No body | { data: [tasks], msg } & status(200, 204) | server error? 500
 GET/tasks/:id | Get all tasks in specfic section | yes | checkAuth | sectionId: params.id | { data: { id, name,  description, priority, endDate, status}, msg } & status(200, 204) | server error? 500
-#POST/task | add section | yes | checkAuth | { name } | { data: {id, name}, msg } & status(201) | server error? 500 
-#PUT/task/:id | edi section | yes | checkAuth | { name }, params.id | { data: {id, name}, msg } & status(200) | server error? 500 
-#Delete/task/:id | delete section | yes | checkAuth | params.id | { msg } & status(204) | server error? 500 
+POST/task | add task | yes | checkAuth | { name,  description, priority, endDate, status } | { data:  { id, name,  description, priority, endDate, status}, msg } & status(201) | server error? 500 
+PUT/task/:id | edi task | yes | checkAuth | { name,  description, priority, endDate, status }, params.id | { data:  { id, name,  description, priority, endDate, status}, msg } & status(200) | server error? 500 
+Delete/task/:id | delete task | yes | checkAuth | params.id | { msg } & status(204) | server error? 500 
