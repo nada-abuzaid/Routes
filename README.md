@@ -9,7 +9,6 @@ Title| Description | Protected | Required middleware | Request | Success respons
  |--- |--- |--- |--- |--- |--- |--- |
 POST/signup | create account & give token | No | No |{ email, username, password } | { data, msg } & status(201) | email exist? 409  wrong password? 401 invalid email? 400 
 POST/signin | verify & login user | No | No |{ email, password } | { data: {email, username}, msg } & status(200) | email not exist? 409  wrong password? 401
-Get/logout | delete token & logout user | No | No | {  } | { msg } & status() | 
 
 <hr> 
 
