@@ -35,7 +35,7 @@ Delete/section/:id | delete section | yes | checkAuth | params.id | { msg } & st
 ### Tasks Routes
 Title| Description | Protected | Required middleware | Request | Success response | Errors 
  |--- |--- |--- |--- |--- |--- |--- |
-GET/tasks | Get all tasks | yes | checkAuth | No body | { data: [tasks], msg } & status(200, 204) | server error? 500
+GET/tasks | Get all tasks to the user | yes | checkAuth | userId | { data: [tasks], msg } & status(200, 204) | server error? 500
 GET/tasks/:id | Get all tasks in specfic section | yes | checkAuth | sectionId: params.id | { data: { id, name,  description, priority, endDate, status}, msg } & status(200, 204) | server error? 500
 POST/task | add task | yes | checkAuth | { name,  description, priority, endDate, status } | { data:  { id, name,  description, priority, endDate, status}, msg } & status(201) | server error? 500 
 PUT/task/:id | edi task | yes | checkAuth | { name,  description, priority, endDate, status }, params.id | { data:  { id, name,  description, priority, endDate, status}, msg } & status(200) | server error? 500 
